@@ -6,6 +6,7 @@
 	},
 	"parserOptions": {
 		"ecmaVersion": 2019
+		"ecmaVersion": 9
 	},
 	"rules": {
 		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
