@@ -7,7 +7,7 @@ client.once("ready", () => {
 });
 
 var prefix = "~"
-client.on("message", (message) => {
+client.on("message", message => {
   if (message.author === client.user) return;
   if (message.content.startwith === (prefix + "ping")) {
     message.channel.sendMessage("pong!");
