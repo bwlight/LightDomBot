@@ -9,9 +9,9 @@ client.once("ready", () => {
 var prefix = "~"
 client.on('message', message => {
   if (message.author === client.user) return;
-  if (message.content.startsWith(prefix + 'foo')) {
-		message.channel.sendMessage('bar');
-	}
+  if (message.content.startsWith(prefix + "ping")) {
+      message.channel.send("pong a working!");
+    }
 });
 
 client.login(settings.token);
