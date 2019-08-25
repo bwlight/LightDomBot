@@ -1,14 +1,16 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const settings = require('./settings.json');
 
-client.on("ready", () => {
+client.once("ready", () => {
   console.log("I am ready!");
-});
-
+})
+var prefix = "~"
 client.on("message", (message) => {
-  if (message.content.startsWith("ping")) {
-    message.channel.send("pong!");
+  if (message.author === client.user) return;
+  if (message.content.startwith === (prefix + "!ping")) {
+    message.channel.sendMessage("pong!");
   }
 });
 
-client.login("HpyZWLX6e-gMGlF1QJQV-SlC9knPfjSW");
+client.login(settings.token);
