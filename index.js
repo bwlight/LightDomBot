@@ -9,8 +9,8 @@ client.once("ready", () => {
 
 client.on('message', message => {
   if (message.author === client.user) return;
-  if (message.content.startsWith(${prefix} + "ping")) {
-      message.channel.send("pong a working!");
+  if (message.content.startsWith("${prefix}ping")) {
+      message.channel.send("pongs a working!");
     }
 });
 
