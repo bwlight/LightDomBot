@@ -12,7 +12,9 @@ Bot.on('message', message => {
   if (message.content.startsWith(`${prefix}ping`)) {
   	message.channel.send('Pong.');
   } else if (message.content === `${prefix}server`) {
-    message.channel.send  (`This Server's Name Is: ${message.guild.Name}`);
+    message.channel.send  (`This Server's Name Is: ${message.guild.name}\nTotal Members: ${message.guild.memberCount}`);
+  } else if (message.content === `${prefix}info`) {
+    message.channel.send(`${message.author.username}\nYour ID: ${message.author.id}`);
   }
 });
 
