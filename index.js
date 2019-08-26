@@ -11,6 +11,8 @@ client.on('message', message => {
   if (message.author === client.user) return;
   if (message.content.startsWith(`${prefix}ping`)) {
   	message.channel.send('Pong.');
+  } else if (message.content === `${prefix}server`) {
+    message.channel.send  (`This Server's Name Is: ${message.guild.Name}`);
   }
 });
 
